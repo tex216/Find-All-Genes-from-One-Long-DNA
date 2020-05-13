@@ -118,14 +118,11 @@ public class FindAllGenes {
         System.out.println("count = " + count);
         //How many genes in this file are longer than 60?
         System.out.println("longcount = " + longcount);
-        //How many genes in this file have cgRatio 
-        //greater than 0.35?
+        //How many genes in this file have cgRatio greater than 0.35?
         System.out.println("cgnum = " + cgNum);
-        //How many times does the codon CTG 
-        //appear in this strand of DNA?
+        //How many times does the codon CTG appear in this strand of DNA?
         System.out.println("CTG times = " + times);
-        //What is the length of the longest gene 
-        //in the collection of genes found in this file?
+        //What is the length of the longest gene in the collection of genes found in this file?
         System.out.println("maxlength = " + maxlength);
     }
     
