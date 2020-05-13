@@ -3,8 +3,7 @@ import java.io.*;
 
 public class FindAllGenes {
     
-    public int findStopCodon(String dna, int startIndex, 
-                             String stopCodon) {
+    public int findStopCodon(String dna, int startIndex, String stopCodon) {
        int currIndex = dna.indexOf(stopCodon, startIndex + 3);
        while (currIndex != -1) {
            int diff = currIndex - startIndex;
@@ -27,15 +26,13 @@ public class FindAllGenes {
         int tagIndex = findStopCodon(dna, startIndex, "TAG");
         int tgaIndex = findStopCodon(dna, startIndex, "TGA");
         int minIndex = 0;
-        if (taaIndex == -1 || 
-           (tgaIndex != -1 && taaIndex > tgaIndex)) {
+        if (taaIndex == -1 || (tgaIndex != -1 && taaIndex > tgaIndex)) {
             minIndex = tgaIndex;
         }
         else {
             minIndex = taaIndex;   
         }
-        if (minIndex == -1 || 
-           (tagIndex != -1 && minIndex > tagIndex)) {
+        if (minIndex == -1 || (tagIndex != -1 && minIndex > tagIndex)) {
             minIndex = tagIndex;
         }
         if (minIndex == -1) {
